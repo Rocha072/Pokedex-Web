@@ -20,6 +20,7 @@
 
     <link rel="stylesheet" href="./src/styles/main.css">
     <link rel="stylesheet" href="./src/styles/pokedex.css">
+    <link rel="stylesheet" href="./src/styles/poke-especific.css">
 </head>
 <body>
     <section class="content">
@@ -38,21 +39,27 @@
         </div>
 
         <div id="poke-overlay" class = "hidden">
-             <div id="modal">
+             
+            <div id="modal">
                 <span id="close-button">&times;</span>
                 <div id="modal-content">
+                    
                         <!-- pokemon -->
                     <div class="pokemon">
 
                         <div class="headerPokemon">
                             <span class="name"> Bulbasaur</span>
                             <ul class="types">
-                                <li class="type">tipo 1</li>
-                                <li class="type">tipo 2</li>
+                                <li class="type grass">grass</li>
+                                <li class="type poison">poison</li>
                             </ul>
+                            
                         </div>
+                        
+                        <span class="num"> #1 </span>
 
-                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="bulbasaur">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="bulbasaur">
+                        
                         <div class="description">
                             About
                         </div>
