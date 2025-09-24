@@ -27,7 +27,7 @@
 }
 
 #poke-overlay.hidden{
-    display: auto;
+    display: none;
 }
 
 #close-button{
