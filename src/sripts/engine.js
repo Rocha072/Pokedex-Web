@@ -11,7 +11,7 @@ const maxPokemons = 151;
 function convertPokemonToLi(pokemon){
     
     return `
-        <li class="pokemon ${pokemon.type}">
+        <li class="pokemonLi ${pokemon.type} ${pokemon.number}">
 
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
