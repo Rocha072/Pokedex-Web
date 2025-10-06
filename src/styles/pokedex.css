@@ -73,7 +73,7 @@
 
 .pokemonLi .number{
     color: #000;
-    opacity: 0.3;
+    opacity: 0.5;
     text-align: right;
     font-size: 0.625rem;
 }
