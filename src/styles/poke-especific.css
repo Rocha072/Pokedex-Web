@@ -138,12 +138,12 @@
     align-items: center;
     justify-content: center;
     padding: 0.5rem;
-    gap: 5%;
+    gap: 8%;
     flex-shrink: 0;
 }
 
 .topics .topic{
-    font-size: 0.950rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #757474;
     display: flex;
@@ -166,6 +166,7 @@
 .topics .topic.selected{
     color: #000000;
 }
+
 .topics .topic.selected::after {
     content: ''; 
     position: absolute;
@@ -250,4 +251,160 @@
 }
 .gender-female {
     color: #F06890; 
+}
+
+
+.stats-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.stats-list li {
+    display: grid;
+    grid-template-columns:70px 50px 1fr;
+    align-items: center;
+    gap: 1rem; 
+    margin-bottom: 1.7rem;
+    font-size: 1rem;
+    
+}
+
+
+.stats-list .stat-name {
+    font-weight: 600;
+    color: #757474;
+    text-transform: capitalize; 
+}
+
+
+.stats-list .stat-value {
+    font-weight: 700;
+    color: #333;
+    text-align: right;
+}
+
+
+.stats-list .stat-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden; 
+}
+
+
+.stats-list .bar {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease-in-out; 
+}
+
+
+.stats-list .bar.low {
+    background-color: #f34444; 
+}
+.stats-list .bar.medium {
+    background-color: #ffdd57; 
+}
+.stats-list .bar.high {
+    background-color: #48d0b0; 
+}
+
+
+.evolution-chain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+
+.pokemon-evolution {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.pokemon-evolution:hover {
+    transform: scale(1.05); 
+}
+
+
+.pokemon-evolution .img-container {
+    width: 100px;
+    height: 100px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.pokemon-evolution img {
+    width: 90px;
+    height: 90px;
+}
+
+
+.pokemon-evolution .pokemon-name {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.pokemon-evolution .pokemon-id {
+    font-size: 0.8rem;
+    color: #757474;
+}
+
+
+.evolution-trigger {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position:relative;
+    left: 30px;
+}
+
+.evolution-trigger::before{
+    content: '↓';
+    font-size: 2rem;
+    color: #ccc;
+    font-weight: bold;
+}
+
+
+.evolution-trigger .trigger-level {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-top: 0;
+    text-align: center;
+    
+}
+
+
+@media (min-width: 550px){
+    .evolution-chain {
+        flex-direction: row; 
+        justify-content: center;
+    }
+
+    .evolution-trigger{
+        position: static;
+        flex-direction: column;
+    }
+
+    .evolution-trigger::before {
+        content: '→'; 
+    }
+
 }

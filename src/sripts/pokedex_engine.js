@@ -6,12 +6,12 @@ const loadMoreButton = document.getElementById('LoadMoreButton');
 
 const maxPokemons = 151;
 
-
+let allPokemons
 
 function convertPokemonToLi(pokemon){
     
     return `
-        <li class="pokemonLi ${pokemon.type} ${pokemon.number}">
+        <li class="pokemonLi ${pokemon.type}" data-id="${pokemon.number}">
 
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
@@ -31,6 +31,7 @@ function convertPokemonToLi(pokemon){
 function loadPokemonItens(offset, limit){
     pokeApi.getPokemons(offset, limit).then((pokemons) =>{
         pokemonList.innerHTML += pokemons.map(convertPokemonToLi).join('');
+        
     })
 }
 
