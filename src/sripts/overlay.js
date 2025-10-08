@@ -112,8 +112,8 @@ function generateStats(stats){
         hp: 'HP',
         attack: 'Attack',
         defense: 'Defense',
-        specialAttack: 'Sp. Atk',
-        specialDefense: 'Sp. Def',
+        specialattack: 'Sp. Atk',
+        specialdefense: 'Sp. Def',
         speed: 'Speed'
     };
 

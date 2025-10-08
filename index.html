@@ -24,13 +24,38 @@
 </head>
 <body>
     <section class="content">
-        <h2> Pokedex </h2>
+        <h1> Pokedex </h1>
         
+        <div class="custom-select-wrapper">
+            <div class="custom-select">
+                <span class="custom-select-trigger">1st Generation (1-151)</span> <div class="arrow"></div>
+            </div>
+    
+            <ul class="custom-options">
+                <li class="custom-option selected" data-value="1">1st Generation (1-151)</li> 
+                <li class="custom-option" data-value="2">2nd Generation (152-251)</li>
+                <li class="custom-option" data-value="3">3rd Generation (252-386)</li>
+                <li class="custom-option" data-value="4">4th Generation (387-493)</li>
+                <li class="custom-option" data-value="5">5th Generation (494-649)</li>
+                <li class="custom-option" data-value="6">6th Generation (650-721)</li>
+                <li class="custom-option" data-value="7">7th Generation (722-809)</li>
+                <li class="custom-option" data-value="8">8th Generation (810-905)</li>
+                <li class="custom-option" data-value="9">9th Generation (906-1025)</li>
+            </ul>
+        </div>
+
+        
+
         <ol id="pokemonsList" class ="pokemons">
 
            <!-- List of Pokemons -->
 
         </ol>
+
+        <div id="loading-indicator" class="loading-indicator hidden">
+            <div class="spinner"></div>
+            <span>Loading...</span>
+        </div>
 
         <div class="pagination">
             <button id="LoadMoreButton" type="button">
