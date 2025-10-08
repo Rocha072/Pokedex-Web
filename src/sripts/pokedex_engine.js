@@ -1,6 +1,7 @@
 
 let offset = 0;
 let limit = 10;
+
 const pokemonList = document.getElementById('pokemonsList');
 const loadMoreButton = document.getElementById('LoadMoreButton');
 
@@ -19,8 +20,7 @@ const generations = {
     '9': { offset: 905, limit: 120 }
 };
 
-
-let allPokemons
+let maxPokemons = generations['1'].offset + generations['1'].limit; 
 
 function convertPokemonToLi(pokemon){
     

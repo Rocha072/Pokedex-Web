@@ -13,7 +13,7 @@ function convertPokeApiDetailToPokemon(pokeDetail){
     pokemon.types = types;
     pokemon.type = type;
 
-    pokemon.photo = pokeDetail.sprites.other.dream_world.front_default;
+    pokemon.photo = pokeDetail.sprites.other['official-artwork'].front_default;
     return pokemon
 }
 
@@ -47,7 +47,7 @@ function convertPokeApisToPokemonOverlay(pokeData, speciesData, evolutionChainDa
     pokemon.number = pokeData.id;
     pokemon.types = pokeData.types.map((typeSlot)=>typeSlot.type.name);
     pokemon.type = pokemon.types[0];
-    pokemon.photo = pokeData.sprites.other.dream_world.front_default;
+    pokemon.photo = pokeData.sprites.other['official-artwork'].front_default;
     pokemon.weight = pokeData.weight / 10;
     pokemon.height = pokeData.height / 10;
     pokemon.abilities = pokeData.abilities.map((abilitySlot)=>abilitySlot.ability.name);
@@ -105,7 +105,7 @@ function parseEvolutionChain(chain) {
         evolutionArray.push({
             id: speciesId,
             name: speciesName,
-            photo: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${speciesId}.svg`,
+            photo: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${speciesId}.png`,
             trigger: trigger 
         });
 
